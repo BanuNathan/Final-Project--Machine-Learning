@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WA House Price Prediction</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="config.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h2>Washington House Price Prediction </h2>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      
+      <div class="col-md-6">
+        <div class="well">
+          <h5>Select the city</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Housing market Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="map"></div>
+      </div>
+     
+    </div> 
+    <div class="row">
+      <div class="col-md-4">
+        <div id="scatter"></div>
+      </div>
+      <div class="col-md-4"> 
+        <div id="box"></div>
+      </div>
+      <div class="col-md-4">
+        <div id="bubble"> </div>  
+      </div>
+    </div>
+    
+ <!---
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h3>Enter data to predict house price </h3>
+       </div>
+    </div>
+  
+    <form class="form">
+   <div class="well">
+    <h5>Select the city</h5>
+    <select id="selDataset2" onchange="optionChanged(this.value)"></select>
+  </div>
+  </form>
+
+    <form class="form">
+      <h5>Area in Square Feet</h5>
+        <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+
+      <h5>Age of House</h5>
+      <input class="age"  type="text" id="uiAge" class="floatLabel" name="Age" value="1">
+
+      <h5>Number of Bedrooms</h5>
+      <div class="switch-field">        
+        <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+        <label for="radio-bhk-2">2</label>
+        <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+        <label for="radio-bhk-3">3</label>
+        <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+        <label for="radio-bhk-4">4</label>
+        <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+        <label for="radio-bhk-5">5</label>
+      </div>
+    </form>
+
+    <form class="form">
+      <h5>Number of Bathrooms</h5>
+      <div class="switch-field">
+        <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+        <label for="radio-bath-1">1</label>
+        <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+        <label for="radio-bath-2">2</label>
+        <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+        <label for="radio-bath-3">3</label>
+        <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+        <label for="radio-bath-4">4</label>
+        
+      </div>
+    </form>
+
+    <form class="form">
+      <h5>Condition (5= excellent, 1=poor)</h5>
+      <div class="switch-field">
+        <input type="radio" id="radio-bath-1" name="uiCondition" value="1"/>
+        <label for="radio-bath-1">1</label>
+        <input type="radio" id="radio-bath-2" name="uiCondition" value="2" checked/>
+        <label for="radio-bath-2">2</label>
+        <input type="radio" id="radio-bath-3" name="uiCondition" value="3"/>
+        <label for="radio-bath-3">3</label>
+        <input type="radio" id="radio-bath-4" name="uiCondition" value="4"/>
+        <label for="radio-bath-4">4</label>
+        <input type="radio" id="radio-bath-5" name="uiCondition" value="5"/>
+        <label for="radio-bath-5">5</label>
+      </div>
+      </form>
+
+      <form class="form">
+      <button class="submit" onclick="PredictedPrice()" type="button">Predict Price</button>
+      <div id="EstimatedPrice" class="result">	<h5></h5> </div>
+        
+      </form>
+      --->
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="StarterCode/static/js/app.js"></script>
+ 
+  
+</body>
+
+</html>
