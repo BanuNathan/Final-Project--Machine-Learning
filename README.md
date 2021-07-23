@@ -2,6 +2,8 @@
 ### <div align="center">Building a Predictive Model for Property Values</div>
 ### <div align="center">By Banu Nathan, Dan Freda, Fleming Brathwaite, Jenish Jariwala, Jess Hunter</div>
 
+<div align="center"><img src="https://scenicusa.net/images/JL09SeattleSkylinePD.jpg" height = 400 width = 99999 ></div>
+
 ## PROJECT OBJECTIVE
 Build a machine learning model using various machine learning techniques, such as classification and regression, to predict residential property values
 
