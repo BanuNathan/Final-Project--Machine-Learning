@@ -1,11 +1,11 @@
 # <div align="center">Seattle House Price Prediction Algorithm</div>
-### <div align="center">Building a Predictive Model for Property Values</div>
-### <div align="center">By Banu Nathan, Dan Freda, Fleming Brathwaite, Jenish Jariwala, Jess Hunter</div>
-
-<div align="center"><img src="https://scenicusa.net/images/JL09SeattleSkylinePD.jpg" height = 400 width = 99999 ></div>
-
-## PROJECT OBJECTIVE
-Build a machine learning model using various machine learning techniques, such as classification and regression, to predict residential property values
+### <div align="center">Machine-Learning Prediction Model for Property Values in Seattle</div>
+<div align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Downtown_Seattle_skyline_from_Kerry_Park_-_October_2019.jpg" height = 400 width = 99999 >
+  <h2>
+<a href="https://banunathan.github.io/Seattle-Price-Prediction-Website/">View Plotly Visualization</a></br>
+<a href="https://public.tableau.com/app/profile/jessica.hunter1382/viz/HousePricePredictionswithMachineLearningDataVisualtizations/Story1">View Tableau Visualization</a></br>
+<a href="https://project3group03-rutsom.herokuapp.com/">Predict Price</a></br></h2>
+</div>
 
 ## DESCRIPTION OF DATASET
 A dataset found on Kaggle.com will be used in our analysis and prediction. The dataset consists of 4600 rows of homes for sale or sold during a 3 month period. There are 18 columns listing the home's attributes. 
