@@ -8,10 +8,10 @@
 </div>
 
 ## DESCRIPTION OF DATASET
-A dataset found on Kaggle.com will be used in our analysis and prediction. The dataset consists of 4600 rows of homes for sale or sold during a 3 month period. There are 18 columns listing the home's attributes. 
+A dataset found on Kaggle.com is used in our analysis and prediction. The dataset consists of 4600 rows of homes for sale or sold during a 3 month period. There are 18 columns listing the home's attributes. 
 
 ## STRATEGY
-Various techniques will be used to clean, analyze and visualize the dataset in order to predict the home’s value. Variables that drive residential property values include, but are not limited to, price, square foot of home, number of bedrooms, number of bathrooms, square foot of lot, amenities and location.
+Various techniques are used to clean, analyze and visualize the dataset in order to predict the home’s value. Variables that drive residential property values include, but are not limited to, price, square foot of home, number of bedrooms, number of bathrooms, square foot of lot, amenities and location.
 
 ## EXECUTION
 Clean and modify dataset via Jupyter Notebook
