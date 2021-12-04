@@ -23,6 +23,6 @@ Make and evaluate predictions (and fine tune as necessary)
 Choose the best predictions
 
 ### ADDITIONAL ANALYSIS
-Additional data science and visualization tools/programs will be used to create graphs, plots and maps    that will add additional insight into our analysis and predictions.  
+Additional data science and visualization tools/programs are used to create graphs, plots and maps    that will add additional insight into our analysis and predictions.  
 
 ## [Link to the dataset](https://www.kaggle.com/shree1992/housedata)
